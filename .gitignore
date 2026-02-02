@@ -1,0 +1,24 @@
+# Build outputs
+publish-output/
+**/bin/
+**/obj/
+**/publish/
+
+# Azure
+.azure/
+
+# IDE
+.vs/
+.vscode/
+*.user
+*.suo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment & Config files
+FE/fe-admin/.env
+FE/FE-User/.env
+FE/FE-User/src/config/api.config.ts
+
