@@ -20,5 +20,4 @@ Thumbs.db
 # Environment & Config files
 FE/fe-admin/.env
 FE/FE-User/.env
-FE/FE-User/src/config/api.config.ts
 
