@@ -1,192 +1,248 @@
-# Pawnder Admin Panel
+# 🖥️ Pawnder Admin Panel
 
-Ứng dụng quản trị cho Pawnder - Pet Dating App
+**SEP490_G151** - Web dashboard quản trị
 
-## Cấu trúc Folder
+## 📋 Mô Tả
 
-```
-src/
-├── components/           # Các component tái sử dụng
-│   ├── common/          # Component chung (Header, Sidebar, Footer, Loading, ErrorBoundary)
-│   ├── layout/          # Component layout (Layout, AdminLayout)
-│   ├── forms/           # Component form (FormInput, FormSelect, FormTextarea, FormButton)
-│   ├── ui/              # Component UI cơ bản (Button, Modal, Table, Card, Badge)
-│   └── index.js         # Export tất cả components
-│
-├── pages/               # Các trang của ứng dụng
-│   ├── auth/            # Trang xác thực (Login, ForgotPassword)
-│   ├── dashboard/       # Trang dashboard
-│   ├── users/           # Quản lý người dùng (UsersList, UserDetail, UserCreate, UserEdit)
-│   ├── pets/            # Quản lý thú cưng (PetsList, PetDetail, PetCreate, PetEdit)
-│   ├── reports/         # Quản lý báo cáo (ReportsList, ReportDetail)
-│   └── index.js         # Export tất cả pages
-│
-├── services/            # Các service API
-│   ├── api/             # API services (apiClient, userService, petService, reportService)
-│   ├── auth/            # Authentication service
-│   └── index.js         # Export tất cả services
-│
-├── context/             # React Context cho state management
-│   ├── AuthContext.js   # Context cho authentication
-│   ├── ThemeContext.js  # Context cho theme
-│   └── index.js         # Export tất cả contexts
-│
-├── hooks/               # Custom hooks
-│   └── index.js         # Export tất cả hooks (useApi, useLocalStorage, useDebounce, usePagination)
-│
-├── utils/               # Utility functions
-│   ├── formatDate.js    # Format date utilities
-│   ├── formatCurrency.js # Format currency utilities
-│   ├── validateEmail.js # Validation utilities
-│   ├── debounce.js      # Debounce và throttle utilities
-│   ├── storage.js       # Local storage utilities
-│   ├── constants.js     # Constants cho utilities
-│   └── index.js         # Export tất cả utilities
-│
-├── constants/           # Constants của ứng dụng
-│   └── index.js         # API endpoints, user roles, pet status, etc.
-│
-├── types/               # TypeScript type definitions
-│   └── index.ts         # Interface và type definitions
-│
-├── assets/              # Static assets
-│   ├── images/          # Images
-│   └── icons/           # Icons
-│
-├── styles/              # CSS modules và global styles
-│
-├── App.js               # Main App component
-├── App.css              # Global styles
-└── index.js             # Entry point
-```
+React web app cho quản trị viên - quản lý users, pets, reports, events, experts, policies, payments.
 
-## Cài đặt Dependencies
+## ✨ Tính Năng
+
+### 👥 User Management
+- Xem danh sách tất cả users
+- Chi tiết user (profile, pets, activities)
+- Ban/Unban users (với duration và reason)
+- Quản lý user roles (User, Expert, Admin)
+- Xem lịch sử ban
+- User statistics
+
+### 🐾 Pet Management
+- Xem danh sách tất cả pets
+- Chi tiết pet (photos, characteristics, owner)
+- Approve/Reject pets
+- Quản lý pet photos
+- Xem activities của pets
+
+### 📢 Report Management
+- Xem danh sách reports
+- Chi tiết report (content, reporter, reported user)
+- Resolve/Reject reports
+- Xử lý reports theo priority
+
+### 🎉 Event Management
+- Tạo và quản lý events
+- Xem danh sách events
+- Chi tiết event (submissions, votes, leaderboard)
+- Quản lý submissions
+- Announce winners
+
+### 👨‍⚕️ Expert Management
+- Tạo và quản lý experts
+- Chi tiết expert (profile, chats, confirmations)
+- Expert chat interface
+- Expert AI chat
+- Quản lý expert notifications
+
+### 💬 Chat Management
+- AI Chat management
+- Expert Chat monitoring
+- Chat content moderation
+
+### 📝 Policy Management
+- Tạo và quản lý policies
+- Version control cho policies
+- Draft versions
+- Policy acceptance tracking
+- Policy statistics
+
+### 💳 Payment Management
+- Xem payment history
+- Quản lý premium subscriptions
+- Payment statistics
+- Revenue tracking
+
+### 🚫 Bad Word Management
+- Thêm/sửa/xóa bad words
+- Quản lý bad word categories
+- Bad word levels
+- Bad word detail và edit
+
+### 📊 Dashboard
+- Thống kê tổng quan
+- Charts và graphs (Recharts)
+- Quick actions
+- Real-time updates
+- User growth chart
+
+### 🔔 Notification System
+- Broadcast notifications
+- Send notifications to users
+- Notification history
+- Draft notifications
+
+### 🏷️ Attribute Management
+- Quản lý attributes (đặc điểm thú cưng)
+- Quản lý attribute options
+- CRUD operations cho attributes
+
+## 🛠️ Tech Stack
+
+- React 19.2.0
+- React Router DOM 6.30.1
+- Axios 1.13.0
+- SignalR Client (@microsoft/signalr 10.0.0)
+- Recharts 3.3.0
+
+## 📦 Prerequisites
+
+- Node.js >= 18
+- Backend API đang chạy (port 5297)
+
+## 🔧 Installation
 
 ```bash
+cd FE/fe-admin
 npm install
 ```
 
-## Chạy ứng dụng
+## ⚙️ Configuration
+
+Tạo file `.env` trong root folder:
+- `REACT_APP_API_URL`: Backend API URL (mặc định: `http://localhost:5297`)
+- `REACT_APP_APP_NAME`: App name (mặc định: `Pawnder Admin`)
+- `REACT_APP_SIGNALR_URL`: SignalR hub URL (mặc định: `http://localhost:5297/chatHub`)
+
+## 🚀 Running
 
 ```bash
 npm start
 ```
 
-## Các tính năng chính
+Ứng dụng chạy tại: `http://localhost:3000`
 
-### 1. Authentication
-- Login/Logout
-- Protected routes
-- Token management
-
-### 2. User Management
-- Danh sách người dùng
-- Chi tiết người dùng
-- Ban/Unban user
-- Quản lý role
-
-### 3. Pet Management
-- Danh sách thú cưng
-- Chi tiết thú cưng
-- Approve/Reject pet
-- Upload photos
-
-### 4. Report Management
-- Danh sách báo cáo
-- Chi tiết báo cáo
-- Resolve/Reject reports
-- Statistics
-
-### 5. Dashboard
-- Thống kê tổng quan
-- Charts và graphs
-- Quick actions
-
-## Cấu hình
-
-### Environment Variables
-Tạo file `.env` trong thư mục gốc:
+## 🏗️ Project Structure
 
 ```
-REACT_APP_API_URL=http://localhost:5000/api
-REACT_APP_APP_NAME=Pawnder Admin
+src/
+├── features/        # Feature modules
+│   ├── attributes/ # Attribute management
+│   ├── auth/       # Authentication
+│   ├── badwords/   # Bad word management
+│   ├── dashboard/  # Dashboard
+│   ├── events/     # Event management
+│   ├── experts/    # Expert management
+│   ├── notifications/# Notification system
+│   ├── payments/   # Payment management
+│   ├── pets/       # Pet management
+│   ├── policies/   # Policy management
+│   ├── reports/    # Report management
+│   └── users/      # User management
+├── shared/          # Shared resources
+│   ├── api/       # API services
+│   ├── context/   # React Context (Auth, SignalR, etc.)
+│   └── utils/     # Utilities
+└── components/     # Reusable components
 ```
 
-### API Configuration
-Cấu hình API endpoints trong `src/constants/index.js`:
+## 🛠️ Maintenance Guide
 
-```javascript
-export const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
-```
+### Thêm Feature Mới
 
-## Best Practices
+1. Tạo feature folder trong `src/features/newFeature/`
+2. Tạo API service trong `shared/api/newFeatureService.js`
+3. Tạo components (List, Detail, etc.)
+4. Thêm route trong `config/App.js`
+5. Thêm link trong `Sidebar.js` (nếu cần)
 
-### 1. Component Structure
-- Mỗi component nên có file riêng
-- Sử dụng functional components với hooks
-- Props validation với PropTypes hoặc TypeScript
+### State Management
 
-### 2. State Management
-- Sử dụng Context API cho global state
-- Local state với useState cho component state
-- Custom hooks cho logic tái sử dụng
+Sử dụng React Context cho global state:
+- `AuthContext` - Authentication state
+- `SignalRContext` - SignalR connection
+- `NotificationContext` - Notifications
+- `ThemeContext` - Theme
 
-### 3. API Calls
-- Sử dụng axios với interceptors
+Thêm context mới: Tạo file trong `shared/context/`, export Provider và custom hook.
+
+### API Client
+
+Sử dụng `shared/api/apiClient.js`:
+- Tự động thêm JWT token vào headers
+- Handle 401 errors (auto logout)
 - Error handling tập trung
-- Loading states
 
-### 4. Styling
-- CSS modules cho component-specific styles
-- Global styles trong App.css
-- Responsive design
+### SignalR Integration
 
-### 5. File Organization
-- Mỗi feature có folder riêng
-- Index files để export
-- Consistent naming conventions
+Sử dụng `SignalRContext`:
+- Get connection từ context
+- Listen: `connection.on('EventName', handler)`
+- Send: `connection.send('MethodName', data)`
 
-## Development Guidelines
+### Protected Routes
 
-1. **Naming Conventions**
-   - Components: PascalCase (UserList.js)
-   - Files: camelCase (userService.js)
-   - Constants: UPPER_SNAKE_CASE (API_BASE_URL)
+Sử dụng `ProtectedRoute` component để bảo vệ routes cần authentication.
 
-2. **Code Structure**
-   - Import statements ở đầu file
-   - Component definition
-   - Export ở cuối file
+### Adding New Page
 
-3. **Error Handling**
-   - Try-catch cho async operations
-   - Error boundaries cho components
-   - User-friendly error messages
+1. Tạo component trong `features/`
+2. Thêm route trong `config/App.js`
+3. Thêm link trong `Sidebar.js` (nếu cần)
 
-4. **Performance**
-   - Lazy loading cho routes
-   - Memoization cho expensive calculations
-   - Debounce cho search inputs
+### Styling
 
-## Troubleshooting
+- Component-specific: CSS files trong `styles/` folder
+- Global: `index.css`
+- Sử dụng CSS modules hoặc inline styles
 
-### Common Issues
+## 🔐 Authentication
 
-1. **CORS Error**
-   - Kiểm tra API server configuration
-   - Đảm bảo API_URL đúng
+- Login tại `/login`
+- JWT token lưu trong localStorage
+- Protected routes tự động redirect nếu chưa login
+- Token refresh xử lý trong `apiClient.js`
 
-2. **Authentication Issues**
-   - Kiểm tra token storage
-   - Verify API endpoints
+## 🧪 Testing
 
-3. **Build Errors**
-   - Clear node_modules và reinstall
-   - Check for syntax errors
+```bash
+npm test
+```
 
-## Contributing
+## 🚢 Build for Production
 
-1. Follow coding standards
-2. Write meaningful commit messages
-3. Test your changes
-4. Update documentation if needed
+```bash
+npm run build
+```
+
+Deploy thư mục `build/` lên web server.
+
+## 🐛 Troubleshooting
+
+### CORS Error
+- Kiểm tra Backend CORS config (allowed origins: localhost:3000)
+- Đảm bảo frontend URL trong allowed origins
+
+### Authentication Issues
+- Kiểm tra token trong localStorage
+- Login lại nếu token expired
+
+### API Connection Failed
+- Kiểm tra Backend đang chạy (port 5297)
+- Kiểm tra `REACT_APP_API_URL` trong `.env`
+
+### Build Errors
+```bash
+rm -rf node_modules package-lock.json
+npm install
+rm -rf build
+npm run build
+```
+
+### SignalR Connection Issues
+- Kiểm tra hub URL (http://localhost:5297/chatHub)
+- Kiểm tra authentication token
+- Xem browser console logs
+
+---
+
+**Version**: 1.0  
+**Last Updated**: 2026-02-02
