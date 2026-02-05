@@ -1,68 +1,51 @@
-## 📝 Mô tả tổng quan
+## 📝 Mô tả ngắn gọn
 
-<!-- Bắt buộc: Tóm tắt ngắn gọn PR này làm gì, bối cảnh nào, link issue (nếu có). -->
-
-- Loại thay đổi: (Backend / Mobile / Admin / Docs / Other)
-- Liên quan đến: (Issue #..., task, màn hình, endpoint, use case...)
+- Loại thay đổi (BE / FE-User / FE-Admin / Docs / Other):
+- Mô tả ngắn (làm gì? vì sao? link issue nếu có):
 
 ## 🔍 Thay đổi chính
 
-<!-- Liệt kê theo nhóm, giúp reviewer đọc nhanh. -->
-
-- **Backend**:
-  - [ ] API mới:
-  - [ ] Sửa logic:
-  - [ ] Thay đổi model / DTO / migration:
-- **Mobile (FE-User)**:
-  - [ ] Màn hình / component:
-  - [ ] Logic Redux / state:
-  - [ ] Navigation / flow:
-- **Admin (fe-admin)**:
+- Backend:
+  - [ ] API:
+  - [ ] Logic:
+  - [ ] Model / DTO / DB:
+- Mobile:
+  - [ ] UI / màn hình:
+  - [ ] State / Redux:
+  - [ ] Navigation:
+- Admin:
   - [ ] Page / component:
-  - [ ] API call / service:
-- **Khác**:
+  - [ ] API / service:
+- Khác:
   - [ ] Config / env:
-  - [ ] Docs / README:
+  - [ ] Docs:
 
-## ✅ Đã test chưa?
+## ✅ Test
 
-<!-- Nên ghi rõ đã test những case nào, trên môi trường nào. -->
+- [ ] Backend
+- [ ] Mobile (Android / iOS)
+- [ ] Admin
+- [ ] Không cần test đặc biệt
 
-- [ ] Backend:
-  - [ ] Đã chạy `dotnet test`
-  - [ ] Đã test thủ công trên Swagger
-- [ ] Mobile:
-  - [ ] Android emulator
-  - [ ] iOS simulator
-- [ ] Admin:
-  - [ ] Đã test các flow chính trên browser
-- [ ] Không có thay đổi cần test đặc biệt
+Ghi rõ nếu có flow đã test:
 
-**Mô tả chi tiết cách test (nếu có):**
+- Bước:
+- Kết quả mong đợi:
 
-- Bước 1:
-- Bước 2:
-- Kỳ vọng:
+## 🔄 Ảnh hưởng
 
-## 🔄 Ảnh hưởng side-effect
+- [ ] DB (migration / SQL)
+- [ ] Auth / permission
+- [ ] Performance
+- [ ] Không có ảnh hưởng đáng kể
 
-- [ ] Có thay đổi database (migration / SQL)
-- [ ] Có ảnh hưởng tới auth / permission
-- [ ] Có ảnh hưởng tới performance
-- [ ] Không có side-effect đáng kể
+## 📸 UI (nếu có)
 
-Nếu có, mô tả rõ:
-
-## 📸 Hình ảnh / Screenshot (nếu có UI)
-
-<!-- Đính kèm ảnh trước/sau, hoặc GIF demo flow. -->
+Đính kèm screenshot / video (nếu cần).
 
 ## 📋 Checklist
 
-- [ ] Code đã tự review lại một lượt
-- [ ] Không còn comment/debug log thừa
-- [ ] Đã cập nhật README / docs nếu cần
-- [ ] Đã đảm bảo backward-compatible (nếu là API/public contract)
-- [ ] Đã sync/merge từ `develop` (hoặc branch target) mới nhất
-
-
+- [ ] Đã tự review code
+- [ ] Không còn comment / log thừa
+- [ ] Đã cập nhật docs (nếu cần)
+- [ ] Đã sync với branch target mới nhất

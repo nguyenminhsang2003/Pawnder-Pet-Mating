@@ -1,6 +1,6 @@
 ---
 name: "🚀 Feature request"
-about: Đề xuất tính năng / cải tiến mới cho dự án
+about: Đề xuất tính năng / cải tiến
 title: "[FEAT] Mô tả ngắn gọn tính năng"
 labels: enhancement
 assignees: ""
@@ -8,34 +8,24 @@ assignees: ""
 
 ## 💡 Ý tưởng
 
-Mô tả ngắn gọn ý tưởng / tính năng bạn muốn thêm.
+Tính năng muốn thêm là gì?
 
-## 🎯 Vấn đề / Nhu cầu đang gặp
+## 🎯 Vấn đề
 
-- Người dùng / dev hiện tại đang gặp vấn đề gì?
-- Tính năng này giải quyết điều gì?
+Đang gặp vấn đề / nhu cầu gì?
 
-## 📌 Phạm vi (scope) gợi ý
+## 📌 Phạm vi (chọn phần liên quan)
 
-- Backend:
-  - [ ] API mới
-  - [ ] Sửa API cũ
-- Mobile (FE-User):
-  - [ ] Màn hình / flow mới
-  - [ ] Cải tiến UI/UX
-- Admin (fe-admin):
-  - [ ] Trang / component mới
-  - [ ] Thêm filter / action / dashboard
+- [ ] Backend
+- [ ] Mobile (FE-User)
+- [ ] Admin (fe-admin)
 
-## 🧩 Mô tả chi tiết hơn (nếu có)
+Mô tả ngắn gọn phạm vi:
 
-- Flow người dùng:
-- Các case đặc biệt:
-- Quy tắc / business rule:
+## 🧩 Chi tiết (tuỳ chọn)
 
-## 📸 Wireframe / UI / Tài liệu tham khảo (nếu có)
-
-Link Figma / ảnh / tài liệu khác.
+- Flow chính:
+- Case đặc biệt:
 
 ## ⏱️ Ưu tiên
 

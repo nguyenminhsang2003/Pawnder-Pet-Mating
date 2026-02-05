@@ -1,6 +1,6 @@
 ---
 name: "🐞 Bug report"
-about: Báo lỗi để team có thể fix đúng và nhanh
+about: Báo lỗi
 title: "[BUG] Mô tả ngắn gọn lỗi"
 labels: bug
 assignees: ""
@@ -8,47 +8,38 @@ assignees: ""
 
 ## 📍 Môi trường
 
-- Platform:
-  - [ ] Backend
-  - [ ] Mobile (FE-User)
-  - [ ] Admin (fe-admin)
-- Thiết bị / OS (nếu có):
+- [ ] Backend
+- [ ] Mobile (FE-User)
+- [ ] Admin (fe-admin)
+- Thiết bị / OS:
 - Branch:
 
 ## ❗ Mô tả lỗi
 
-Mô tả ngắn gọn, rõ ràng lỗi đang gặp.
+Lỗi gì? Ở màn hình / API nào?
 
-## 🔁 Các bước để reproduce
+## 🔁 Cách reproduce
 
-1. Go to '...'
-2. Click on '...'
-3. Scroll down to '...'
-4. See error
+1. ...
+2. ...
+3. ...
 
 ## ✅ Kết quả mong đợi
 
-Mô tả ứng xử đúng mà bạn mong đợi.
+Mong đợi:
 
 ## 🧪 Kết quả thực tế
 
-Mô tả ứng xử thực tế (có thể kèm screenshot / log).
+Thực tế:
 
-## 📸 Screenshot / Video (nếu có)
+## 📸 Screenshot / Video
 
-Đính kèm hình ảnh / video minh họa.
+Đính kèm nếu có.
 
-## 📄 Log / Error message (nếu có)
+## 📄 Log / Error message
 
 ```text
-Paste log/error tại đây
+Paste log tại đây
 ```
-
-## ⚠️ Mức độ ảnh hưởng
-
-- [ ] Blocker (không sử dụng được tính năng chính)
-- [ ] High
-- [ ] Medium
-- [ ] Low
 
 
