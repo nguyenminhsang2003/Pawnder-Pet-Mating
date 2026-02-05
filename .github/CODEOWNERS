@@ -1,0 +1,12 @@
+# Code owners cho dự án Pawnder
+# Mọi thay đổi trong repo sẽ yêu cầu review từ các owner bên dưới.
+
+# Toàn bộ repo
+* @nguyen-sang-2003
+
+# Có thể chia nhỏ theo module (nếu team lớn hơn), ví dụ:
+# /BackEnd/      @backend-lead
+# /FE/FE-User/   @mobile-lead
+# /FE/fe-admin/  @admin-lead
+
+
